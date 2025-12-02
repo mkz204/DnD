@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre Noi - DND Sales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0c0a09', surface: '#1c1917', apricot: '#F97316', text: '#fafaf9', muted: '#a8a29e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Manrope', sans-serif; }</style>
+</head>
+<body class="bg-brand-bg text-brand-text antialiased flex flex-col min-h-screen">
+
+<!-- Navbar (Same as Index) -->
+<nav class="fixed w-full z-50 bg-brand-bg/80 backdrop-blur-lg border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 group">
+            <div class="w-10 h-10 bg-black rounded-lg flex items-center justify-center text-brand-apricot font-extrabold text-xl border border-brand-apricot/20">D</div>
+            <span class="font-extrabold text-2xl tracking-tight">DND<span class="text-brand-apricot">SALES</span></span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-brand-muted hover:text-brand-apricot transition">Acasă</a>
+            <a href="about.html" class="text-brand-apricot font-bold">Despre Noi</a>
+            <a href="contact.html" class="text-brand-muted hover:text-brand-apricot transition">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow pt-32 pb-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Hero Text -->
+        <h1 class="text-4xl lg:text-5xl font-bold mb-8 border-l-4 border-brand-apricot pl-6">
+            Suntem partenerul tău strategic în teren.
+        </h1>
+
+        <div class="prose prose-invert prose-lg text-brand-muted mt-12 space-y-6">
+            <p>
+                DND Sales Solution SRL este un lider în generarea de leaduri, dedicat succesului clienților săi. Cu o echipă de experți și strategii inovatoare, am atins numeroase realizări și ne propunem să avansăm și mai mult.
+            </p>
+            <p class="text-white font-semibold text-xl">
+                Valorile noastre sunt integritatea, inovația și succesul partenerilor noștri.
+            </p>
+        </div>
+
+        <!-- Values Grid -->
+        <h2 class="text-3xl font-bold text-white mt-20 mb-10">Valori Cheie</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-brand-surface p-8 rounded-xl border border-white/5 hover:border-brand-apricot/50 transition duration-300 group">
+                <div class="text-brand-apricot text-xl font-bold mb-3 group-hover:translate-x-1 transition-transform">Integritate</div>
+                <p class="text-sm text-brand-muted">Transparență totală în relația cu partenerii. Nu ascundem nimic.</p>
+            </div>
+            <div class="bg-brand-surface p-8 rounded-xl border border-white/5 hover:border-brand-apricot/50 transition duration-300 group">
+                <div class="text-brand-apricot text-xl font-bold mb-3 group-hover:translate-x-1 transition-transform">Agilitate</div>
+                <p class="text-sm text-brand-muted">Adaptare rapidă la condițiile pieței. Schimbăm strategia când e nevoie.</p>
+            </div>
+            <div class="bg-brand-surface p-8 rounded-xl border border-white/5 hover:border-brand-apricot/50 transition duration-300 group">
+                <div class="text-brand-apricot text-xl font-bold mb-3 group-hover:translate-x-1 transition-transform">Transparență</div>
+                <p class="text-sm text-brand-muted">Rezultate clare și măsurabile. Raportare zilnică.</p>
+            </div>
+        </div>
+
+        <!-- Quote Box -->
+        <div class="mt-20 relative overflow-hidden rounded-2xl bg-gradient-to-r from-brand-apricot/20 to-brand-surface p-10 border border-brand-apricot/20">
+            <div class="absolute top-0 right-0 text-9xl text-white/5 font-serif leading-none">"</div>
+            <h3 class="text-2xl text-brand-apricot font-bold mb-4 relative z-10">Propoziție de Valoare</h3>
+            <p class="text-white text-xl italic relative z-10">"O strângere de mână valorează cât o mie de click-uri."</p>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-black py-10 border-t border-white/5 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 text-center text-stone-500 text-sm">
+        &copy; 2025 DND Sales Solution SRL.
+    </div>
+</footer>
+</body>
+</html>

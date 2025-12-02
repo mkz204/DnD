@@ -1,0 +1,128 @@
+
+:root {
+    --bs-brand-apricot: #FB923C;
+    --bs-brand-accent: #fdba74;
+    --bs-dark-bg: #1c1917;
+    --bs-card-bg: #292524;
+    --bs-text-color: #e7e5e4;
+    --bs-link-color: var(--bs-brand-apricot);
+
+
+    --apricot-dark-start: #36281a;
+    --apricot-dark-end: #1c1917;
+}
+
+.btn-warning {
+    --bs-btn-color: #1c1917;
+    --bs-btn-bg: var(--bs-brand-apricot);
+    --bs-btn-border-color: var(--bs-brand-apricot);
+    --bs-btn-hover-bg: var(--bs-brand-accent);
+    --bs-btn-hover-border-color: var(--bs-brand-accent);
+}
+
+
+#mainNav {
+    background-color: var(--bs-dark-bg);
+    border-bottom: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Umbră subtilă constantă */
+    transition: all 0.4s ease;
+}
+
+#mainNav.navbar-scrolled {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+    font-weight: 900;
+}
+.nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.masthead {
+    text-align: center;
+    color: var(--bs-text-color);
+    /* NOU: GRADIENT LINEAR DARK APRICOT */
+    background: linear-gradient(180deg, var(--apricot-dark-start) 0%, var(--apricot-dark-end) 100%);
+
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid var(--apricot-dark-start); /* Separare vizuală */
+}
+
+.masthead-heading {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4rem;
+    margin-bottom: 25px;
+}
+
+.page-section {
+    padding: 6rem 0;
+    background-color: var(--bs-dark-bg);
+    color: var(--bs-text-color);
+}
+
+.page-section.bg-light {
+    background-color: var(--bs-card-bg) !important;
+    border-top: 1px solid #3d3b3a;
+    border-bottom: 1px solid #3d3b3a;
+}
+
+.team-member, .review-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    border: 1px solid rgba(251, 146, 60, 0.1); /* Chenar subtil Apricot */
+}
+
+.team-member:hover, .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(251, 146, 60, 0.3); /* Umbră Apricot la hover */
+}
+
+#contacte input.form-control, #contacte textarea.form-control {
+    background-color: var(--bs-dark-bg);
+    border: 1px solid var(--bs-card-bg);
+    color: var(--bs-text-color);
+    transition: border-color 0.3s;
+}
+
+#contacte input.form-control:focus, #contacte textarea.form-control:focus {
+    background-color: var(--bs-dark-bg);
+    color: var(--bs-text-color);
+    border-color: var(--bs-brand-apricot);
+    box-shadow: 0 0 0 0.25rem rgba(251, 146, 60, 0.25);
+}
+
+.carousel-item {
+    padding: 0 15%;
+}
+.review-card {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .carousel-item {
+        padding: 0 5%;
+    }
+    .masthead-heading {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .masthead-subheading {
+        font-size: 1.25rem;
+    }
+    .page-section {
+        padding: 4rem 0;
+    }
+}
