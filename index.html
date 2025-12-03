@@ -5,27 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DND Sales - Soluții Premium de Vânzări</title>
 
-    <!-- 1. Load Tailwind Engine -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- 2. Load Centralized Config -->
     <script src="js/config.js"></script>
-
-    <!-- 3. Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- 4. Custom Base Styles -->
     <style>
         body { font-family: 'Manrope', sans-serif; }
 
-        /* Glass Effect Class */
         .glass-card {
             background: rgba(28, 25, 23, 0.7);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Custom Scrollbar */
+
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0c0a09; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
@@ -34,11 +28,10 @@
 </head>
 <body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-apricot selection:text-white flex flex-col min-h-screen">
 
-<!-- Navbar -->
+
 <nav id="mainNav" class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-brand-bg/80 backdrop-blur-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
-            <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 group">
                 <div class="relative">
                     <div class="absolute inset-0 bg-brand-apricot blur rounded-lg opacity-50 group-hover:opacity-100 transition duration-500"></div>
@@ -47,7 +40,7 @@
                 <span class="font-extrabold text-2xl tracking-tight">DND<span class="text-brand-apricot">SALES</span></span>
             </a>
 
-            <!-- Desktop Menu -->
+
             <div class="hidden md:flex items-center space-x-8">
                 <a href="index.html" class="text-white font-semibold hover:text-brand-apricot transition">Acasă</a>
                 <a href="about.html" class="text-brand-muted font-medium hover:text-white transition">Despre Noi</a>
@@ -57,14 +50,13 @@
                 </a>
             </div>
 
-            <!-- Mobile Menu Button -->
+
             <button id="mobileMenuBtn" class="md:hidden text-white p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
     </div>
 
-    <!-- Mobile Menu (Hidden by default) -->
     <div id="mobileMenu" class="hidden md:hidden bg-brand-surface border-b border-white/5 p-4 space-y-4 absolute w-full top-20 left-0 z-40 shadow-xl">
         <a href="index.html" class="block text-brand-apricot font-bold">Acasă</a>
         <a href="about.html" class="block text-white hover:text-brand-apricot">Despre Noi</a>
@@ -72,10 +64,9 @@
     </div>
 </nav>
 
-<!-- Hero Section -->
+
 <main class="flex-grow">
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <!-- Background Gradients -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none">
             <div class="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-brand-apricot/10 rounded-full blur-[100px]"></div>
             <div class="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px]"></div>
@@ -104,7 +95,6 @@
                 </div>
             </div>
 
-            <!-- Visual Stats Card -->
             <div class="relative animate-float hidden lg:block">
                 <div class="absolute inset-0 bg-brand-apricot/20 blur-3xl rounded-full transform rotate-6"></div>
                 <div class="glass-card p-8 rounded-2xl relative border-t border-l border-white/10 shadow-2xl">
@@ -128,7 +118,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="py-24 bg-brand-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
@@ -137,7 +126,6 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="glass-card p-10 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group cursor-pointer">
                     <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 group-hover:scale-110 transition-transform border border-white/5 shadow-inner">
                         🎯
@@ -146,7 +134,6 @@
                     <p class="text-brand-muted leading-relaxed">Nu pierdem timpul cu "poate". Filtrăm piața și îți aducem doar clienții care sunt gata să cumpere.</p>
                 </div>
 
-                <!-- Service 2 -->
                 <div class="glass-card p-10 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group cursor-pointer border-brand-apricot/30 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-brand-apricot/10 blur-2xl"></div>
                     <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 group-hover:scale-110 transition-transform border border-white/5 shadow-inner">
@@ -156,7 +143,6 @@
                     <p class="text-brand-muted leading-relaxed">Agenții noștri sunt experți în psihologia vânzării face-to-face. Creăm relații, nu doar tranzacții.</p>
                 </div>
 
-                <!-- Service 3 -->
                 <div class="glass-card p-10 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group cursor-pointer">
                     <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 group-hover:scale-110 transition-transform border border-white/5 shadow-inner">
                         📈
@@ -169,14 +155,12 @@
     </section>
 </main>
 
-<!-- Footer -->
 <footer class="bg-black py-10 border-t border-white/5 mt-auto">
     <div class="max-w-7xl mx-auto px-4 text-center text-stone-500 text-sm">
         &copy; 2025 DND Sales Solution SRL. Toate drepturile rezervate.
     </div>
 </footer>
 
-<!-- Link to JS Logic -->
 <script src="js/script.js"></script>
 </body>
 </html>
