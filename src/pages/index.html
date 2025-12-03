@@ -5,29 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DND Sales - Soluții Premium de Vânzări</title>
 
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    <style>
-        body { font-family: 'Manrope', sans-serif; }
-
-        .glass-card {
-            background: rgba(28, 25, 23, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
 
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0c0a09; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #F97316; }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
-<body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-apricot selection:text-white flex flex-col min-h-screen">
-
+<body class="bg-brand-bg text-brand-text font-sans antialiased selection-apricot flex flex-col min-h-screen">
 
 <nav id="mainNav" class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-brand-bg/80 backdrop-blur-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,16 +27,14 @@
                 <span class="font-extrabold text-2xl tracking-tight">DND<span class="text-brand-apricot">SALES</span></span>
             </a>
 
-
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-white font-semibold hover:text-brand-apricot transition">Acasă</a>
+                <a href="index.html" class="nav-active-home hover:text-brand-apricot transition">Acasă</a>
                 <a href="about.html" class="text-brand-muted font-medium hover:text-white transition">Despre Noi</a>
                 <a href="contact.html" class="text-brand-muted font-medium hover:text-white transition">Contact</a>
                 <a href="contact.html" class="bg-brand-apricot text-black px-6 py-2 rounded-full font-bold hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(249,115,22,0.3)]">
                     Cere Ofertă
                 </a>
             </div>
-
 
             <button id="mobileMenuBtn" class="md:hidden text-white p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -63,7 +48,6 @@
         <a href="contact.html" class="block text-white hover:text-brand-apricot">Contact</a>
     </div>
 </nav>
-
 
 <main class="flex-grow">
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
