@@ -5,53 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DND Sales - Soluții Premium de Vânzări</title>
 
-    <!-- TAILWIND CSS (No Bootstrap) -->
+    <!-- 1. Load Tailwind Engine -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- EmailJS (For contact form logic) -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- 2. Load Centralized Config -->
+    <script src="js/config.js"></script>
 
-    <!-- CONFIGURATION -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            bg: '#0c0a09',      /* Deep Black/Stone */
-                            surface: '#1c1917', /* Dark Stone for Cards */
-                            apricot: '#F97316', /* Vibrant Orange */
-                            glow: '#fb923c',    /* Light Orange Glow */
-                            text: '#fafaf9',    /* Off-white Text */
-                            muted: '#a8a29e',   /* Muted Gray Text */
-                        }
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- FONTS -->
+    <!-- 3. Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
 
+    <!-- 4. Custom Base Styles -->
     <style>
         body { font-family: 'Manrope', sans-serif; }
 
-        /* Glassmorphism Effect */
+        /* Glass Effect Class */
         .glass-card {
             background: rgba(28, 25, 23, 0.7);
             backdrop-filter: blur(10px);
@@ -65,9 +32,9 @@
         ::-webkit-scrollbar-thumb:hover { background: #F97316; }
     </style>
 </head>
-<body class="bg-brand-bg text-brand-text antialiased flex flex-col min-h-screen">
+<body class="bg-brand-bg text-brand-text antialiased selection:bg-brand-apricot selection:text-white flex flex-col min-h-screen">
 
-<!-- NAVIGATION -->
+<!-- Navbar -->
 <nav id="mainNav" class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-brand-bg/80 backdrop-blur-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
@@ -97,7 +64,7 @@
         </div>
     </div>
 
-    <!-- Mobile Dropdown -->
+    <!-- Mobile Menu (Hidden by default) -->
     <div id="mobileMenu" class="hidden md:hidden bg-brand-surface border-b border-white/5 p-4 space-y-4 absolute w-full top-20 left-0 z-40 shadow-xl">
         <a href="index.html" class="block text-brand-apricot font-bold">Acasă</a>
         <a href="about.html" class="block text-white hover:text-brand-apricot">Despre Noi</a>
@@ -105,18 +72,16 @@
     </div>
 </nav>
 
-<!-- HERO SECTION -->
+<!-- Hero Section -->
 <main class="flex-grow">
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <!-- Background Blobs -->
+        <!-- Background Gradients -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full z-0 pointer-events-none">
             <div class="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-brand-apricot/10 rounded-full blur-[100px]"></div>
             <div class="absolute bottom-[10%] right-[10%] w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[100px]"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full grid lg:grid-cols-2 gap-16 items-center">
-
-            <!-- Text Content -->
             <div class="animate-fade-in-up">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
                     <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -139,7 +104,7 @@
                 </div>
             </div>
 
-            <!-- Visual Graphic -->
+            <!-- Visual Stats Card -->
             <div class="relative animate-float hidden lg:block">
                 <div class="absolute inset-0 bg-brand-apricot/20 blur-3xl rounded-full transform rotate-6"></div>
                 <div class="glass-card p-8 rounded-2xl relative border-t border-l border-white/10 shadow-2xl">
@@ -150,7 +115,6 @@
                         </div>
                         <div class="px-3 py-1 bg-green-500/20 text-green-400 rounded-lg text-sm font-bold">+24%</div>
                     </div>
-                    <!-- Bar Chart Simulation -->
                     <div class="flex items-end justify-between h-40 gap-4">
                         <div class="w-full bg-white/5 rounded-t-lg h-[40%] hover:h-[50%] hover:bg-brand-apricot transition-all duration-500"></div>
                         <div class="w-full bg-white/5 rounded-t-lg h-[60%] hover:h-[70%] hover:bg-brand-apricot transition-all duration-500"></div>
@@ -164,7 +128,7 @@
         </div>
     </section>
 
-    <!-- SERVICES GRID -->
+    <!-- Services Section -->
     <section class="py-24 bg-brand-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-20">
@@ -173,26 +137,32 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
+                <!-- Service 1 -->
                 <div class="glass-card p-10 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group cursor-pointer">
-                    <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 border border-white/5">🎯</div>
+                    <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 group-hover:scale-110 transition-transform border border-white/5 shadow-inner">
+                        🎯
+                    </div>
                     <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-apricot transition-colors">Leaduri Calificate</h3>
-                    <p class="text-brand-muted">Nu pierdem timpul cu "poate". Filtrăm piața și îți aducem doar clienții gata să cumpere.</p>
+                    <p class="text-brand-muted leading-relaxed">Nu pierdem timpul cu "poate". Filtrăm piața și îți aducem doar clienții care sunt gata să cumpere.</p>
                 </div>
 
-                <!-- Card 2 -->
+                <!-- Service 2 -->
                 <div class="glass-card p-10 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group cursor-pointer border-brand-apricot/30 relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-brand-apricot/10 blur-2xl"></div>
-                    <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 border border-white/5">🤝</div>
+                    <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 group-hover:scale-110 transition-transform border border-white/5 shadow-inner">
+                        🤝
+                    </div>
                     <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-apricot transition-colors">Vânzări în Teritoriu</h3>
-                    <p class="text-brand-muted">Agenții noștri sunt experți în psihologia vânzării face-to-face. Creăm relații, nu doar tranzacții.</p>
+                    <p class="text-brand-muted leading-relaxed">Agenții noștri sunt experți în psihologia vânzării face-to-face. Creăm relații, nu doar tranzacții.</p>
                 </div>
 
-                <!-- Card 3 -->
+                <!-- Service 3 -->
                 <div class="glass-card p-10 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group cursor-pointer">
-                    <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 border border-white/5">📈</div>
+                    <div class="w-14 h-14 bg-brand-bg rounded-xl flex items-center justify-center text-brand-apricot text-2xl mb-8 group-hover:scale-110 transition-transform border border-white/5 shadow-inner">
+                        📈
+                    </div>
                     <h3 class="text-2xl font-bold mb-4 group-hover:text-brand-apricot transition-colors">Consultanță B2B</h3>
-                    <p class="text-brand-muted">Analizăm procesul tău actual de vânzare și implementăm strategii care au funcționat pentru liderii din industrie.</p>
+                    <p class="text-brand-muted leading-relaxed">Analizăm procesul tău actual de vânzare și implementăm strategii care au funcționat pentru liderii din industrie.</p>
                 </div>
             </div>
         </div>
@@ -206,7 +176,7 @@
     </div>
 </footer>
 
-<!-- Main Script -->
-<script src="script.js"></script>
+<!-- Link to JS Logic -->
+<script src="js/script.js"></script>
 </body>
 </html>
